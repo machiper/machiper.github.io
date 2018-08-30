@@ -1282,7 +1282,7 @@
 
         @media screen and (max-width: 736px) {
             #wrapper {
-                padding: 1em;
+                padding: 0em;
             }
         }
 
@@ -1473,7 +1473,7 @@
 
         @media screen and (max-width: 736px) {
             .panel {
-                max-width: calc(100vw - 2em);
+                max-width: calc(100vw);
                 width: 30em;
             }
             .panel>.image {
