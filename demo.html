@@ -1,23 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="ch">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="ch">
     <link href="./css/face.css" type="text/css" rel="stylesheet">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/browser.min.js"></script>
     <script src="./js/breakpoints.min.js"></script>
     <script src="./js/util.js"></script>
     <title>WORKS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
-<body id="body" height="100%">
-    <script type="text/javascript">
-        //设置body高度为浏览器高度，当然也可以不设置   
-        document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px';
-    </script>
-        <!--iframe的高度设置为父元素的高度即可实现高度自适应-->
-        <!--这边以body为父元素，当然也可以以div之类的元素为父元素-->
-        <iframe name="Info1" id="Info1" src="https://free.modao.cc/app/TaHEimYmvqQySU4qXd2lXslndWwDQvo/embed" onload="this.height=body.offsetHeight" width="100%" scrolling="true" frameborder="0"></iframe>
-        <iframe src="https://free.modao.cc/app/TaHEimYmvqQySU4qXd2lXslndWwDQvo/embed" width="455" height="747" allowTransparency="true" frameborder="0"></iframe>
+<body class="">
+    <div id="wrapper">
+        <article id="home" class="panel special">
+            <div class="image" style="background-image: url(./image/pic01.jpg); background-position: center center;"><img src="./image/pic01.jpg" alt="" data-position="center center" style="display: none;"></div>
+            <div class="content">
+                <div class="inner">
+                        <iframe src="https://free.modao.cc/app/TaHEimYmvqQySU4qXd2lXslndWwDQvo/embed" width="455" height="747" allowTransparency="true" frameborder="0"></iframe>
+                    <header>
+                        <p>实用优先设计点缀<br>设计的初衷和目的都是解决问题</p>
+                    </header>
+                    <nav id="nav">
+                        <ul class="actions stacked special animated spinY">
+                            <li><a href="#business" class="button">web-电商</a></li>
+                            <li><a href="#education" class="button">web-教育</a></li>
+                            <li><a href="#chat" class="button">app-社交</a></li>
+                            <li><a href="#food" class="button">app-美食</a></li>
+                            <li><a href="#xian" class="button">logo-西安</a></li>
+                            <li><a href="#dolphin" class="button">logo-海豚</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="icons">
+                        <li><a href="#" class="icon fa-wechat"><span class="label">Wechat</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article id="business" class="panel secondary inactive" style="display: none;">
+            <div class="content">
+                <ul class="actions animated spinX">
+                    <li><a href="#home" class="button small back">Back</a></li>
+                </ul><br>
+                <img src="./image/web-business.jpg" width="100%">
+            </div>
+        </article>
+        <article id="education" class="panel secondary inactive" style="display: none;">
+            <div class="content">
+                <ul class="actions animated spinX">
+                    <li><a href="#home" class="button small back">Back</a></li>
+                </ul><br>
+                <img src="./image/web-education.jpg" width="100%">
+            </div>
+        </article>
+        <article id="chat" class="panel secondary inactive" style="display: none;">
+            <div class="content">
+                <ul class="actions animated spinX">
+                    <li><a href="#home" class="button small back">Back</a></li>
+                    <a style="right: 0; align-content: right; text-align: right;">查看交互</a>
+                </ul><br>
+                <img src="./image/zhishuo.jpg" width="100%">
+            </div>
+        </article>
+        <article id="food" class="panel secondary inactive" style="display: none;">
+            <div class="content">
+                <ul class="actions animated spinX">
+                    <li><a href="#home" class="button small back">Back</a></li>
+                </ul><br>
+                <img src="./image/remnant-chicken.jpg" width="100%">
+            </div>
+        </article>
+        <article id="xian" class="panel secondary inactive" style="display: none;">
+            <div class="content">
+                <ul class="actions animated spinX">
+                    <li><a href="#home" class="button small back">Back</a></li>
+                </ul><br>
+                <img src="./image/logo-xian.jpg" width="100%">
+                
+            </div>
+        </article>
+        <article id="dolphin" class="panel secondary inactive" style="display: none;">
+            <div class="content">
+                <ul class="actions animated spinX">
+                    <li><a href="#home" class="button small back">Back</a></li>
+                </ul><br>
+                <img src="./image/logo-dolphin.jpg" width="100%">
+            </div>
+        </article>   
+        <footer id="footer">
+            <p class="copyright">Chiper</p>
+        </footer>
+    </div>
+    
+    <script>(function ($) { var $window = $(window), $document = $(document), $body = $('body'), $wrapper = $('#wrapper'), $footer = $('#footer'), $panels = $wrapper.children('.panel'), $animatedLinks = $('.actions.animated a'), $animatedLink = null; breakpoints({ xlarge: ['1281px', '1680px'], large: ['981px', '1280px'], medium: ['737px', '980px'], small: ['481px', '736px'], xsmall: ['361px', '480px'], xxsmall: [null, '360px'] }); $window.on('load', function () { window.setTimeout(function () { $body.removeClass('is-preload-0'); window.setTimeout(function () { $body.removeClass('is-preload-1'); }, 1500); }, 100); }); $animatedLinks.on('click', function (event) { var href = $(this).attr('href'); if (href.charAt(0) != '#' || (href.length > 1 && $panels.filter(href).length == 0)) return; event.preventDefault(); event.stopPropagation(); window.location.hash = ''; window.location.hash = href; $animatedLink = $(this); }); var locked = true; $panels.each(function () { var $this = $(this), $image = $this.children('.image'), $img = $image.find('img'), position = $img.data('position'); $image.css('background-image', 'url(' + $img.attr('src') + ')'); if (position) $image.css('background-position', position); $img.hide(); }); window.setTimeout(function () { locked = false; }, 1250); $window.on('hashchange', function (event) { var $ul, delay = 0, $panel; if (window.location.hash && window.location.hash != '#') $panel = $(window.location.hash); else $panel = $panels.first(); event.preventDefault(); event.stopPropagation(); if (locked) return; locked = true; if ($animatedLink) { $ul = $animatedLink.parents('ul'); $animatedLink.addClass('active'); delay = 250; } window.setTimeout(function () { $panels.addClass('inactive'); $footer.addClass('inactive'); window.setTimeout(function () { $panels.hide(); $panel.show(); $document.scrollTop(0); window.setTimeout(function () { $panel.removeClass('inactive'); if ($animatedLink) { $animatedLink.removeClass('active'); $animatedLink = null; } locked = false; $window.triggerHandler('--refresh'); window.setTimeout(function () { $footer.removeClass('inactive'); }, 250); }, 100); }, 350); }, delay); }); (function () { var $panel; if (window.location.hash && window.location.hash != '#') $panel = $(window.location.hash); else $panel = $panels.first(); $panels.not($panel).addClass('inactive').hide(); })(); if (browser.name == 'ie') { $window.on('--refresh', function () { $wrapper.css('height', 'auto'); window.setTimeout(function () { var h = $wrapper.height(), wh = $window.height(); if (h < wh) $wrapper.css('height', '100vh'); }, 0); }); $window.on('load', function () { $window.triggerHandler('--refresh'); }); $('.actions.animated').removeClass('animated'); } })(jQuery);</script>
 </body>
 </html>
