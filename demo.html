@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="ch">
+    <link href="./css/face.css" type="text/css" rel="stylesheet">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/browser.min.js"></script>
+    <script src="./js/breakpoints.min.js"></script>
+    <script src="./js/util.js"></script>
+    <title>WORKS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+</head>
+<body id="body" height="100%">
+    <script type="text/javascript">
+        //设置body高度为浏览器高度，当然也可以不设置   
+        document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px';
+    </script>
+        <!--iframe的高度设置为父元素的高度即可实现高度自适应-->
+        <!--这边以body为父元素，当然也可以以div之类的元素为父元素-->
+        <iframe name="Info1" id="Info1" src="https://free.modao.cc/app/TaHEimYmvqQySU4qXd2lXslndWwDQvo/embed" onload="this.height=body.offsetHeight" width="100%" scrolling="true" frameborder="0"></iframe>
+        <iframe src="https://free.modao.cc/app/TaHEimYmvqQySU4qXd2lXslndWwDQvo/embed" width="455" height="747" allowTransparency="true" frameborder="0"></iframe>
+</body>
+</html>

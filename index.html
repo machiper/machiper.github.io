@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" lang="ch">
     <link href="./css/face.css" type="text/css" rel="stylesheet">
@@ -11,7 +10,6 @@
     <title>WORKS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
-
 <body class="">
     <div id="wrapper">
         <article id="home" class="panel special">
@@ -19,7 +17,6 @@
             <div class="content">
                 <div class="inner">
                     <header>
-                        <!-- <h2>马庆鹏</h2> -->
                         <p>实用优先设计点缀<br>设计的初衷和目的都是解决问题</p>
                     </header>
                     <nav id="nav">
@@ -34,9 +31,6 @@
                     </nav>
                     <ul class="icons">
                         <li><a href="#" class="icon fa-wechat"><span class="label">Wechat</span></a></li>
-                        <!-- <li><a href="https://pixelarity.com/items/demos/indivisible/cyan/#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                        <li><a href="https://pixelarity.com/items/demos/indivisible/cyan/#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="https://pixelarity.com/items/demos/indivisible/cyan/#" class="icon fa-envelope"><span class="label">Email</span></a></li> -->
                     </ul>
                 </div>
             </div>
@@ -58,29 +52,12 @@
             </div>
         </article>
         <article id="chat" class="panel secondary inactive" style="display: none;">
-            <!-- <p>大姐夫拉克束带结发</p> -->
-            <div class="image" style="background-image: url(./image/store.jpg); background-position:center;">
-                
-                <img src="./image/store.jpg" alt="" data-position="center center" style="display: none;">
-            </div>
             <div class="content">
                 <ul class="actions animated spinX">
                     <li><a href="#home" class="button small back">Back</a></li>
-                </ul>
-                <img src="./image/store.jpg">
-                <p><a href="https://shop538234970.taobao.com/?spm=a1z10.1-c-s.w5001-18053941104.3.69ae6bb2LWnQBi&scene=taobao_shop" target="_blank">点击进入店铺</a></p>
-                <div class="inner">
-                    <header>
-                        <h2>WEB-电商首页</h2>
-                        <p>潮流手机配件商铺首页设计</p>
-                        <p>已经上线</p>
-                    </header>
-                    <p>该商店定位中青年活力群体，整体采用蓝紫渐变的色彩为基调</p>
-                    <p>顶部以四张轮播大图为视觉起始点，提供更大视觉冲击吸引用户，而每张大图以纯色为背景重点突出产品，让用户初步直观的知道店铺的产品以及风格，同时也方便商家推广店铺热销的商品。
-                        接下来是以已打开的信封的方式呈现优惠券，为的是在形式上与其他店铺区分开，让用户在浏览店铺的同时感受新意，加深用户印象。主体部分则用将产品当作壁画随机错乱排布，避免刻板。
-                    </p>
-                    
-                </div>
+                    <a style="right: 0; align-content: right; text-align: right;">查看交互</a>
+                </ul><br>
+                <img src="./image/zhishuo.jpg" width="100%">
             </div>
         </article>
         <article id="food" class="panel secondary inactive" style="display: none;">
@@ -112,7 +89,7 @@
             <p class="copyright">Chiper</p>
         </footer>
     </div>
+    
     <script>(function ($) { var $window = $(window), $document = $(document), $body = $('body'), $wrapper = $('#wrapper'), $footer = $('#footer'), $panels = $wrapper.children('.panel'), $animatedLinks = $('.actions.animated a'), $animatedLink = null; breakpoints({ xlarge: ['1281px', '1680px'], large: ['981px', '1280px'], medium: ['737px', '980px'], small: ['481px', '736px'], xsmall: ['361px', '480px'], xxsmall: [null, '360px'] }); $window.on('load', function () { window.setTimeout(function () { $body.removeClass('is-preload-0'); window.setTimeout(function () { $body.removeClass('is-preload-1'); }, 1500); }, 100); }); $animatedLinks.on('click', function (event) { var href = $(this).attr('href'); if (href.charAt(0) != '#' || (href.length > 1 && $panels.filter(href).length == 0)) return; event.preventDefault(); event.stopPropagation(); window.location.hash = ''; window.location.hash = href; $animatedLink = $(this); }); var locked = true; $panels.each(function () { var $this = $(this), $image = $this.children('.image'), $img = $image.find('img'), position = $img.data('position'); $image.css('background-image', 'url(' + $img.attr('src') + ')'); if (position) $image.css('background-position', position); $img.hide(); }); window.setTimeout(function () { locked = false; }, 1250); $window.on('hashchange', function (event) { var $ul, delay = 0, $panel; if (window.location.hash && window.location.hash != '#') $panel = $(window.location.hash); else $panel = $panels.first(); event.preventDefault(); event.stopPropagation(); if (locked) return; locked = true; if ($animatedLink) { $ul = $animatedLink.parents('ul'); $animatedLink.addClass('active'); delay = 250; } window.setTimeout(function () { $panels.addClass('inactive'); $footer.addClass('inactive'); window.setTimeout(function () { $panels.hide(); $panel.show(); $document.scrollTop(0); window.setTimeout(function () { $panel.removeClass('inactive'); if ($animatedLink) { $animatedLink.removeClass('active'); $animatedLink = null; } locked = false; $window.triggerHandler('--refresh'); window.setTimeout(function () { $footer.removeClass('inactive'); }, 250); }, 100); }, 350); }, delay); }); (function () { var $panel; if (window.location.hash && window.location.hash != '#') $panel = $(window.location.hash); else $panel = $panels.first(); $panels.not($panel).addClass('inactive').hide(); })(); if (browser.name == 'ie') { $window.on('--refresh', function () { $wrapper.css('height', 'auto'); window.setTimeout(function () { var h = $wrapper.height(), wh = $window.height(); if (h < wh) $wrapper.css('height', '100vh'); }, 0); }); $window.on('load', function () { $window.triggerHandler('--refresh'); }); $('.actions.animated').removeClass('animated'); } })(jQuery);</script>
 </body>
-
 </html>
