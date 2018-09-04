@@ -946,6 +946,7 @@
         ul.icons li {
             display: inline-block;
             padding-left: 0;
+            text-align: center;
         }
 
         ul.icons li .icon {
